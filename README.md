@@ -78,6 +78,29 @@ platformdirs · Pydantic · pytest
 
 ---
 
+## Stats
+
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=adeoluwaadesina&show_icons=true&theme=github_dark&include_all_commits=true&count_private=true&hide_border=true&title_color=0a84ff&icon_color=0a84ff&text_color=ffffff&bg_color=0d1117"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adeoluwaadesina&layout=compact&theme=github_dark&hide_border=true&title_color=0a84ff&text_color=ffffff&bg_color=0d1117&langs_count=6"/>
+
+</div>
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=adeoluwaadesina&theme=github-dark-blue&hide_border=true&stroke=0a84ff&ring=0a84ff&fire=34c759&currStreakLabel=0a84ff&background=0d1117"/>
+
+</div>
+
+<div align="center">
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=adeoluwaadesina&theme=darkhub&no-frame=true&column=6&margin-w=8&title_color=0a84ff)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
 ## What I'm working on
 
 - **Wingman v0.3** — server-pushed updates via MCP notifications (replacing 2.5s polling)
