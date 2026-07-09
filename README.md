@@ -31,7 +31,7 @@ I'm an indie builder who ships **a lot**: AI infrastructure, multiplayer games, 
 |---|---|---|
 | 🪂 | [**Wingman MCP**](https://github.com/adeoluwaadesina/wingman-mcp) | Persistent interactive plan panel for Claude conversations. `pip install wingman-mcp` [![PyPI](https://img.shields.io/pypi/v/wingman-mcp?color=ff6b6b&style=flat-square)](https://pypi.org/project/wingman-mcp/) |
 | 🧬 | [**Genesis MCP**](https://github.com/adeoluwaadesina/genesis-mcp) | A self-extending MCP server. Ships with one tool that creates other tools, live |
-| 📖 | [**Storyvive V4**](https://github.com/adeoluwaadesina/Storyvive-V4) | Canon extraction engine for stories, so AI never forgets your characters |
+| 📖 | [**Storyvive V4**](https://github.com/adeoluwaadesina/Storyvive-V4) | Canon extraction engine for stories but there is more so wait and see |
 | 👠 | [**Zeli Models**](https://github.com/adeoluwaadesina/zeli-models) | Portfolio and booking platform for a Lagos modeling agency |
 | 🏗️ | [**Groundwork NG**](https://github.com/adeoluwaadesina/groundwork-ng) | Policy and infrastructure frameworks for Nigeria's future |
 | ⛽ | [**Fuel Log MCP**](https://github.com/adeoluwaadesina/fuel-log-mcp-server) | MCP server for tracking fuel consumption |
