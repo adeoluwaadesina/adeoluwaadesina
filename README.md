@@ -25,7 +25,7 @@ A persistent, interactive plan panel that lives inside your Claude conversation.
 A self-extending MCP server. It ships with exactly one tool: a tool that creates other tools, live, in the middle of your session.
 
 **📖 [Storyvive V4](https://github.com/adeoluwaadesina/Storyvive-V4)**
-Canon extraction for stories, so AI stops forgetting your characters halfway through chapter three.
+You'll see soon.
 
 **💵 [Fake Naira Detector](https://github.com/adeoluwaadesina/Fake-Naira-Detector-using-Deep-Learning)**
 Deep learning applied to a very real Nigerian problem: spotting counterfeit banknotes.
