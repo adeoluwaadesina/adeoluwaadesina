@@ -1,115 +1,102 @@
-<!-- GitHub Profile README — adeoluwaadesina -->
+<!-- GitHub Profile README: adeoluwaadesina · vibe: playful & colorful -->
 
 <div align="center">
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   building infrastructure for long-running AI conversations │
-│                                                             │
-│   MCP servers · local-first · open source                  │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b6b,50:feca57,100:48dbfb&height=200&section=header&text=Hey,%20I'm%20Adeolu!%20👋&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=I%20build%20fun%20things%20that%20actually%20ship&descSize=20&descAlignY=58" width="100%"/>
 
-# Adeoluwa Adesina
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=800&color=FF6B6B&center=true&vCenter=true&width=600&lines=AI+Engineer+%C2%B7+MCP+Builder;Shipping+from+Lagos%2C+Nigeria+🇳🇬;Apps+%C2%B7+Games+%C2%B7+AI+Infrastructure;pip+install+wingman-mcp+😎" alt="Typing intro"/>
 
-**AI Engineer · MCP Builder · Lagos, Nigeria**
+<br/>
 
-[![wingman-mcp](https://img.shields.io/pypi/v/wingman-mcp?color=0a84ff&label=wingman-mcp&style=flat-square)](https://pypi.org/project/wingman-mcp/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/wingman-mcp?color=0a84ff&label=installs%2Fmo&style=flat-square)](https://pypi.org/project/wingman-mcp/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-34c759?style=flat-square)](https://github.com/adeoluwaadesina/wingman-mcp/blob/main/LICENSE)
+<img src="https://komarev.com/ghpvc/?username=adeoluwaadesina&color=ff6b6b&style=for-the-badge&label=PROFILE+VISITS" alt="Profile views"/>
 
 </div>
 
----
+<br/>
 
-I build **MCP servers** — open-source infrastructure that extends what Claude can do inside long, complex conversations.
+## 🎨 What I'm about
 
-My current focus: making AI-assisted work feel less like chatting and more like having a capable collaborator who tracks state, holds context, and takes action alongside you.
+I'm an indie builder who ships **a lot**: AI infrastructure, multiplayer games, fintech prototypes, and MCP servers that make Claude feel like a real collaborator instead of a chatbot.
 
----
+- 🔭 Currently building **Wingman Cloud** (task tracking for AI conversations, going multi-device)
+- 🎮 Also building **Beat Party**, a Jackbox-style music party game my friends want to pay for
+- 🧠 Obsessed with **local-first tools**: no telemetry, no phone-home
+- 🌍 Based in **Lagos, Nigeria**
 
-## Shipped
+<br/>
 
-### [Wingman MCP](https://github.com/adeoluwaadesina/wingman-mcp) — `pip install wingman-mcp`
+## 🚀 Things I've shipped
 
-> *Sits beside you. Doesn't fly the plane.*
+| | Project | What it is |
+|---|---|---|
+| 🪂 | [**Wingman MCP**](https://github.com/adeoluwaadesina/wingman-mcp) | Persistent interactive plan panel for Claude conversations. `pip install wingman-mcp` [![PyPI](https://img.shields.io/pypi/v/wingman-mcp?color=ff6b6b&style=flat-square)](https://pypi.org/project/wingman-mcp/) |
+| 🧬 | [**Genesis MCP**](https://github.com/adeoluwaadesina/genesis-mcp) | A self-extending MCP server. Ships with one tool that creates other tools, live |
+| 📖 | [**Storyvive V4**](https://github.com/adeoluwaadesina/Storyvive-V4) | Canon extraction engine for stories but there is more so wait and see |
+| 👠 | [**Zeli Models**](https://github.com/adeoluwaadesina/zeli-models) | Portfolio and booking platform for a Lagos modeling agency |
+| 🏗️ | [**Groundwork NG**](https://github.com/adeoluwaadesina/groundwork-ng) | Policy and infrastructure frameworks for Nigeria's future |
+| ⛽ | [**Fuel Log MCP**](https://github.com/adeoluwaadesina/fuel-log-mcp-server) | MCP server for tracking fuel consumption |
+| 💵 | [**Fake Naira Detector**](https://github.com/adeoluwaadesina/Fake-Naira-Detector-using-Deep-Learning) | Deep learning model that spots counterfeit Naira notes |
 
-Gives Claude conversations a **persistent, interactive plan panel** rendered inline in the chat via MCP Apps (SEP-1865). Plans live in local SQLite. You tick checkboxes from the panel; Claude ticks tasks after completing work. State syncs live. Works in Claude Desktop and MCPJam.
+<br/>
 
-```
-┌──────────────────────────────────────────────────┐
-│  Claude Desktop / Cursor / MCPJam                │
-│                                                  │
-│  ┌──────────────┐   ┌──────────────────────────┐ │
-│  │  Claude LLM  │──▶│  Wingman MCP Server      │ │
-│  └──────────────┘   │  12 tools · SQLite store │ │
-│         ▲           └──────────────────────────┘ │
-│  sendMessage()                   │               │
-│         │              JSON-RPC postMessage       │
-│  ┌──────────────┐                │               │
-│  │  Plan Panel  │◀───────────────┘               │
-│  │  (iframe)    │                                │
-│  └──────────────┘                                │
-└──────────────────────────────────────────────────┘
-```
-
-**Two discoveries along the way** that aren't documented anywhere else in the MCP ecosystem:
-
-- **`resourceUri` dual-interpretation bug** — a registration-level `resourceUri` in tool metadata is interpreted by Claude Desktop as a "hide from model" signal, silently dropping the tool from `tools/list`. Fix: return `CallToolResult` directly with `_meta` at the top level.
-- **FastMCP `structuredContent` meta-burial bug** — returning a plain dict with `_meta` nested inside causes FastMCP to serialize it into `structuredContent`, burying the resource pointer from the host. Fix: return `CallToolResult` directly.
-
----
-
-### [Genesis MCP](https://github.com/adeoluwaadesina/genesis-mcp)
-
-MCP server scaffolding and tooling. Shipped before Wingman; part of the same infrastructure thesis.
-
----
-
-## Stack
-
-```
-Python · FastMCP · SQLite · MCP Apps (SEP-1865)
-HTML / CSS / JS (vanilla) · Sortable.js
-platformdirs · Pydantic · pytest
-```
-
----
-
-## Stats
+## 🧰 Toolbox
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=adeoluwaadesina&show_icons=true&theme=github_dark&include_all_commits=true&count_private=true&hide_border=true&title_color=0a84ff&icon_color=0a84ff&text_color=ffffff&bg_color=0d1117"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adeoluwaadesina&layout=compact&theme=github_dark&hide_border=true&title_color=0a84ff&text_color=ffffff&bg_color=0d1117&langs_count=6"/>
+<img src="https://skillicons.dev/icons?i=python,typescript,react,nextjs,nodejs,postgres,sqlite,tailwind,vercel,git,vscode,figma&perline=6" alt="Tech stack"/>
 
 </div>
 
+<br/>
+
+## 📊 The numbers
+
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=adeoluwaadesina&theme=github-dark-blue&hide_border=true&stroke=0a84ff&ring=0a84ff&fire=34c759&currStreakLabel=0a84ff&background=0d1117"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=adeoluwaadesina&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=radical&bg_color=00000000" alt="GitHub stats"/>
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adeoluwaadesina&layout=compact&hide_border=true&theme=radical&bg_color=00000000&langs_count=8" alt="Top languages"/>
+
+<br/><br/>
+
+<img src="https://streak-stats.demolab.com?user=adeoluwaadesina&theme=radical&hide_border=true&background=00000000" alt="Streak"/>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=adeoluwaadesina&theme=react-dark&hide_border=true&bg_color=00000000&color=ff6b6b&line=feca57&point=48dbfb" alt="Contribution graph"/>
 
 </div>
 
+<br/>
+
+## 🏆 Trophy shelf
+
 <div align="center">
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=adeoluwaadesina&theme=darkhub&no-frame=true&column=6&margin-w=8&title_color=0a84ff)](https://github.com/ryo-ma/github-profile-trophy)
+<img src="https://github-profile-trophy.vercel.app/?username=adeoluwaadesina&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8" alt="Trophies"/>
 
 </div>
 
----
+<br/>
 
-## What I'm working on
-
-- **Wingman v0.3** — server-pushed updates via MCP notifications (replacing 2.5s polling)
-- **Wingman Cloud** — HTTP/SSE transport, OAuth 2.1, Postgres, Fly.io · unlocks mobile Claude support
-
----
+<!-- SNAKE ANIMATION: uncomment after adding the Platane/snk workflow.
+     Run: gh auth refresh -h github.com -s workflow
+     then add .github/workflows/snake.yml and this will render.
 
 <div align="center">
 
-`No telemetry. No phone-home. Local-first by default.`
+### 🐍 Watch the snake eat my contributions
+
+<img src="https://raw.githubusercontent.com/adeoluwaadesina/adeoluwaadesina/output/github-snake-dark.svg" alt="Snake animation"/>
+
+</div>
+-->
+
+<br/>
+
+<div align="center">
+
+**Fun fact:** everything I build is local-first. Your data stays yours. 🔒
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:48dbfb,50:feca57,100:ff6b6b&height=120&section=footer" width="100%"/>
 
 </div>
